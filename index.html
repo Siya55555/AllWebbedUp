@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sign Up — Your Agency</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Conversion-focused landing page"> 
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-container">
+      <img src="All-Webbed-Up-01-3-2.png" alt="AllWebbedUp" class="logo-img">
+      <div class="nav-right">
+        <a href="mailto:admin@allwebbedup.com.au" class="nav-link email-link">
+          <span class="icon">✉</span> admin@allwebbedup.com.au
+        </a>
+        <a href="tel:1800714148" class="nav-link phone-link">
+          <span class="icon">☎</span> 1800 714 148
+        </a>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+          <span class="h-line one"></span>
+          <span class="h-line two"></span>
+          <span class="h-line three"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="headline">Not convinced? Scroll down and read our reviews.</h1>
+          <p class="subhead">AllWebbedUp helps local businesses get more quality leads — no fluff. Prefer to talk?</p>
+          <div class="contact-line">
+            <a id="call-button" class="btn btn-primary" href="tel:1800714148">Call Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="form-section">
+      <div class="form-card">
+        <h2 class="form-title">Unsure when to book? We can call or email you instead!</h2>
+        <p class="form-sub">Enter your details and we’ll reach out within 24 hours.</p>
+        <form id="leadForm" class="lead-form" action="#" method="POST" novalidate>
+          <label class="field">
+            <span class="label-text">Name</span>
+            <input name="name" type="text" required placeholder="Your name">
+          </label>
+
+          <label class="field">
+            <span class="label-text">Phone</span>
+            <input name="phone" type="tel" required placeholder="Phone number">
+          </label>
+
+          <label class="field">
+            <span class="label-text">Email</span>
+            <input name="email" type="email" required placeholder="you@example.com">
+          </label>
+
+          <label class="field">
+            <span class="label-text">Message</span>
+            <textarea name="message" rows="4" placeholder="Tell us a bit about your goal (optional)"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-cta">CLAIM MY STRATEGY CALL</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="reviews">
+        <a id="reviews-button" class="btn btn-secondary" href="https://g.page/your-google-review-link" target="_blank" rel="noopener">Check our 100+ reviews</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Simple client-side behaviour: replace placeholders as needed.
+    // Replace the phone in the call button if you want programmatic update:
+    // document.getElementById('call-button').href = 'tel:+611234567890';
+
+    // Basic client-side validation & demo submit behaviour
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      // Demo: show a friendly thank you and clear form. Replace with your backend integration.
+      alert('Thanks! Your enquiry has been sent. We will call or email you shortly.');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
