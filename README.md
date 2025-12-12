@@ -17,9 +17,5 @@ Form submission
 Accessibility & best-practices
 - Semantic markup, focus styles and strong colour contrast are present. Please confirm the review link and brand hex.
 
-Next steps I can take for you
-- Replace the reviews URL and switch `tel:` to `+61` format.
-- Wire the form to Formspree and add serverless handling + success screen.
-- Tweak spacing or move form to a right-column layout to match the original page exactly.
+Tell me what you want me to do next .
 
-Tell me which of the above you want me to do next (I can patch files right away).
